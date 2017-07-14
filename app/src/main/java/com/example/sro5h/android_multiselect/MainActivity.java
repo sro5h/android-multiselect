@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements Button.OnClickLis
         switch (view.getId()) {
             case R.id.button:
                 List<String> selected = getSelectedItems();
-                String logString = "Selcted items: " + TextUtils.join(", ", selected);
+                String logString = "Selected items: " + TextUtils.join(", ", selected);
 
                 Log.d("MainActivity", logString);
                 Toast.makeText(this, logString, Toast.LENGTH_SHORT).show();
