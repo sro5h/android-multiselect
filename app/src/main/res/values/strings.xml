@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">android-multiselect</string>
+
+    <string-array name="fruit_array">
+        <item>Apple</item>
+        <item>Orange</item>
+        <item>Banana</item>
+        <item>Lime</item>
+        <item>Pear</item>
+        <item>Coconut</item>
+    </string-array>
+
+</resources>
