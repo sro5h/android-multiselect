@@ -12,25 +12,25 @@ import android.widget.LinearLayout;
  * Adapted from [tokudu](https://gist.github.com/tokudu/410479#file-checkablelinearlayout-java)
  */
 public class CheckableLinearLayout extends LinearLayout implements Checkable {
-	private CheckBox checkbox;
+    private CheckBox checkbox;
 
     public CheckableLinearLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-	}
+    }
 
     @Override
     protected void onFinishInflate() {
-    	super.onFinishInflate();
-		int childCount = getChildCount();
+        super.onFinishInflate();
+        int childCount = getChildCount();
 
-    	// find checked text view
-		for (int i = 0; i < childCount; ++i) {
-			View view = getChildAt(i);
+        // find checked text view
+        for (int i = 0; i < childCount; ++i) {
+            View view = getChildAt(i);
 
-			if (view instanceof CheckBox) {
-				checkbox = (CheckBox) view;
-			}
-		}
+            if (view instanceof CheckBox) {
+                checkbox = (CheckBox) view;
+            }
+        }
     }
 
     @Override
@@ -40,15 +40,15 @@ public class CheckableLinearLayout extends LinearLayout implements Checkable {
 
     @Override
     public void setChecked(boolean checked) {
-    	if (checkbox != null) {
-    		checkbox.setChecked(checked);
-    	}
+        if (checkbox != null) {
+            checkbox.setChecked(checked);
+        }
     }
 
     @Override
     public void toggle() {
-    	if (checkbox != null) {
-    		checkbox.toggle();
-    	}
+        if (checkbox != null) {
+            checkbox.toggle();
+        }
     }
 }
